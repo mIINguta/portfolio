@@ -1,0 +1,134 @@
+$brand-color: #00D2DF;
+$dark-10: #121212;
+$dark-20: #151515;
+$dark-30: #C4C4C4;
+$dark-40: #FFFFFF;
+
+@mixin flex-horizontal(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+   
+    nav{
+        font-weight: 500;
+        display: flex;
+        justify-content: space-around;
+        height: 10vh;
+        align-items: center;
+        ul{
+            @include flex-horizontal();
+            gap: 30px;
+            list-style: none;
+            li{
+                a{
+                    color: $dark-30;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    nav::after{
+        content: "";
+        width: 70%;
+        height: 1px;
+        background: rgb(18,18,18);
+        background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(65,65,65,1) 53%, rgba(29,255,243,1) 100%); 
+        position: absolute;
+        top:10vh;
+    }
+
+    .btn-hamburg{
+        background-color: transparent;
+        font-size: 2.3em;
+        color: $dark-30;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.h2-header, .nome-apresentacao{
+    color: $brand-color;
+}
+
+main{
+    background-color: $dark-10;
+    font-family: 'Inter', sans-serif;
+}
+
+.sec-apresentacao{
+    @include flex-horizontal();
+    justify-content: space-around;
+    height: 100vh;
+
+    .div-apresentacao{
+        color: $dark-40;
+        p, h2{
+            font-size: 1.5em;
+        }
+        .nome-apresentacao{
+            font-size: 2.6em;
+            font-weight: 600;
+        }
+        .btn-apresentacao{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+
+        a{
+            text-decoration: none;
+            color: $dark-40;
+            padding: 8px;
+            border: 1px solid;
+            border-image: linear-gradient(to right, $dark-10, $brand-color) 1;
+        }
+    }
+}
+        figure{
+            width: 30vw;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+}
+
+@media (max-width:700px){
+
+    .ativo{
+        display: flex;
+    }
+
+    header{
+        nav{
+            flex-wrap: wrap;
+        ul{
+            display: none;
+            position: absolute;
+            backdrop-filter: blur(5px);
+            width: 100%;
+            height: 20%;
+        }
+        .btn-hamburg{
+            display: block;
+        }
+    }
+}
+    .sec-apresentacao{
+        flex-direction: column;
+
+        figure{
+            width: 60vw;
+        }
+    }
+    
+}
