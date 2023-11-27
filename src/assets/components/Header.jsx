@@ -4,21 +4,20 @@ import Experiencia from '../pages/Experiencia';
 import SobreMim from "../pages/SobreMim";
 import Apresentacao from "./Apresentacao";
 
-
-
 export default function Header(){
 const [headerClass, setHeaderClass] = useState(false);
     return(
         <>
+        
+        <BrowserRouter>
         <header>
-            <BrowserRouter>
             <nav>
-                <button onClick={() => setHeaderClass(!headerClass)}className="btn-hamburg " title="Abrir Menu">
+                <button onClick={() => setHeaderClass(!headerClass)} className={`btn-hamburg ${headerClass ? 'desativo': 'ativo' }`} title="Abrir Menu">
                     <i class="fa-solid fa-bars">
                         </i></button>
-                <h2 className="h2-header">Portfólio</h2>
+                <h2 className={`h2-header ${headerClass ? 'desativo': 'ativo' }`}>Portfólio</h2>
                 <ul className={`ul-header ${headerClass ? 'ativo' : 'desativo'}`}>
-                <button onClick={() => setHeaderClass(!headerClass)}className="btn-hamburg " title="Fechar">
+                <button onClick={() => setHeaderClass(!headerClass)}className="btn-hamburg-close " title="Fechar">
                 <i class="fa-solid fa-xmark"></i></button>
                     <li><Link to="/" title="Home">Home</Link></li>
                     <li><Link to="/sobre" title="Sobre Mim"> Sobre mim</Link></li>
@@ -26,6 +25,7 @@ const [headerClass, setHeaderClass] = useState(false);
                     <li><Link to="/proj" title="Projetos">Projetos</Link></li>
                 </ul>
             </nav>
+        </header>
             <Routes>
                 <Route path="/" element={<Apresentacao/>}></Route>
                 <Route path="/sobre" element={<SobreMim/>}></Route>
@@ -33,7 +33,10 @@ const [headerClass, setHeaderClass] = useState(false);
                 {/* <Route path="/projetos" element={<Projetos/>}></Route> */}
             </Routes>
         </BrowserRouter>
-        </header>
         </>
+           
+       
+            
+     
 )
 }

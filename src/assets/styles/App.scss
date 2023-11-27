@@ -4,10 +4,29 @@ $dark-20: #151515;
 $dark-30: #C4C4C4;
 $dark-40: #FFFFFF;
 
+@mixin h1-size(){
+    font-size:  1.5em; //24px
+    font-weight: 600;        
+};
+@mixin h2-size(){
+    font-size: 1.25em;//20px
+    font-weight: 500;
+};
+@mixin h3-size(){
+    font-size: 1.125em; //18px
+    font-weight: 300;
+};
+
 @mixin flex-horizontal(){
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@mixin flex($display,$justify-content, $align-items, $flex-direction){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
 }
 
 *{
@@ -32,6 +51,9 @@ header{
                     color: $dark-30;
                     text-decoration: none;
                 }
+                a:focus{
+                    color: $brand-color;
+                }
             }
         }
     }
@@ -46,13 +68,12 @@ header{
         top:10vh;
     }
 
-    .btn-hamburg{
+    .btn-hamburg, .btn-hamburg-close{
         background-color: transparent;
         font-size: 2.3em;
         color: $dark-30;
         border: none;
         cursor: pointer;
-        display: none;
     }
 }
 
@@ -103,21 +124,6 @@ main{
 }
 
 .sec-sobre{
-
-    @mixin h1-size(){
-        font-size:  1.5em;
-        font-weight: 600;        
-    };
-    @mixin h2-size(){
-        font-size: 1.25em;
-        font-weight: 500;
-    };
-    @mixin h3-size(){
-        font-size: 1.125em;
-        font-weight: 300;
-    };
-
-
     @include flex-horizontal();
     height: 100vh;
     justify-content: space-around;
@@ -182,9 +188,75 @@ main{
             color: $brand-color;
         }
     }
-
     
 }
+.sec-experiencia{
+    @include flex-horizontal();
+    height: 100vh;
+    gap: 50px;
+
+    h1{
+        color: $dark-40;
+    }
+    ul{
+        list-style: none;
+
+        li{
+            padding: 8px;
+            border-left: 1px solid $dark-20;
+            button{
+                background-color: transparent;
+                border: none;
+                color: $dark-40;
+                font-size: 1em;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+            }
+        }
+        li:hover{
+            border-left: 1px solid $brand-color;
+            background-color: $dark-20;
+            }
+    }
+    aside{
+   
+        h1{
+            @include h1-size();
+            padding-bottom: 5vh;
+        }
+    }
+    .conteiner-exp{
+
+        width: 50vw;
+        @include flex(flex, flex-start, flex-start, column);
+        gap: 10px;
+
+        p{
+            color: $dark-30;
+        }
+        
+        .titulos{
+            @include flex-horizontal();
+            justify-content: space-between;
+            color: $dark-40;
+            width: 100%;
+            
+            .principal{
+                font-size: 1.5em;
+                width: 40vw;
+            }
+            .periodo{
+                font-size: 0.8em;
+            }
+        }
+        
+            span{
+            color: $brand-color;
+            }
+    }
+}
+
 .footer{
     @include flex-horizontal();
     gap: 60vw;
@@ -202,10 +274,20 @@ main{
 
 }
 
+.ativo{
+    display: flex;
+}
+.desativo{
+    display: none;
+}
+
 @media (max-width:800px){
 
     .ativo{
         display: flex;
+    }
+    .desativo{
+        display: none;
     }
 
     header{
@@ -213,33 +295,37 @@ main{
             flex-wrap: wrap;
             width: 100vw;
             backdrop-filter: blur(30px);
-            margin-bottom: 20px;
+            position: fixed;
             
         ul{
             display: none;
             position: absolute;
-            backdrop-filter: blur(30px);
+            backdrop-filter:blur(30px);
             width: 100%;
             height: 100%;
             justify-content: center;
         }
         .btn-hamburg{
-            display: block;
             font-size: 2em;
         }
     }
 }
     .sec-apresentacao{
         flex-direction: column;
-
+        width: 100%;
+        
+        .div-apresentacao{
+            width: 80%;
+            margin-top: 22vh;
+        }
         figure{
-            width: 60vw;
+            width: 45vw;
         }
     }
 
     .sec-sobre{
         flex-direction: column;
-        margin-top: 20px;
+        height: 100%;
 
         .div-sobre{
             width: 80%;
@@ -252,9 +338,35 @@ main{
         }
         .img-sobre{
             width: 45vw;
+            margin-top: 22vh;
         }
     }
+    .sec-experiencia{
+        flex-direction: column;
+        height: 100vh;
 
+    .conteiner-exp{
+        width: 80%;
+        .titulos{
+            flex-direction: column;
+            gap: 5px;
+
+            .principal, p{
+                width: 100%;
+                text-align: center;
+            }
+    
+        }
+        .local{
+            text-align: center;
+            width: 100%;
+        }
+        .descricao{
+            width: 100%;
+            text-align: justify;
+        }
+    }
+    }
     .footer{
         gap: 20vw;
 }
