@@ -264,6 +264,24 @@ main{
             }
     }
 }
+.sec-projetos{
+    @include flex(flex, center, center,column);
+    height:auto;
+    h1{
+        color: $dark-40;
+        text-align: left;
+        width: 70%;
+        padding: 10px;
+    }
+    .conteiner-projetos{
+        @include flex-horizontal();
+       justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+    }
+}
 
 .footer{
     @include flex-horizontal();
@@ -370,6 +388,34 @@ main{
             text-align: justify;
         }
     }
+    }
+
+    .sec-projetos{
+        @include flex(flex, center, center,column);
+        padding-top: 20vh;
+        h1{
+            color: $dark-40;
+            text-align: left;
+            width: 70%;
+            padding: 10px;
+        }
+        .conteiner-projetos{
+            @include flex-horizontal();
+             flex-direction: column;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 80%;
+            height: 100%;
+
+            
+
+            div{
+                width: 80%;
+                figure{
+                    width: 100%;
+                }
+            }
+        }
     }
     .footer{
         gap: 20vw;

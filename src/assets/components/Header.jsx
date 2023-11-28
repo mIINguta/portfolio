@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Experiencia from '../pages/Experiencia';
 import SobreMim from "../pages/SobreMim";
 import Apresentacao from "./Apresentacao";
+import Projetos from "../pages/Projetos";
 
 export default function Header(){
 const [headerClass, setHeaderClass] = useState(false);
@@ -22,7 +23,7 @@ const [headerClass, setHeaderClass] = useState(false);
                     <li><Link to="/" title="Home">Home</Link></li>
                     <li><Link to="/sobre" title="Sobre Mim"> Sobre mim</Link></li>
                     <li><Link to="/exp" title="Experiência">Experiência</Link></li>
-                    <li><Link to="/proj" title="Projetos">Projetos</Link></li>
+                    <li><Link to="/projetos" title="Projetos">Projetos</Link></li>
                 </ul>
             </nav>
         </header>
@@ -30,7 +31,7 @@ const [headerClass, setHeaderClass] = useState(false);
                 <Route path="/" element={<Apresentacao/>}></Route>
                 <Route path="/sobre" element={<SobreMim/>}></Route>
                 <Route path="/exp" element={<Experiencia/>}></Route>
-                {/* <Route path="/projetos" element={<Projetos/>}></Route> */}
+                <Route path="/projetos" element={<Projetos/>}></Route>
             </Routes>
         </BrowserRouter>
         </>
