@@ -1,5 +1,5 @@
 import React from "react";
-import Eu from '../image/img-apresentacao.svg';
+import Eu from '../image/img-apresentacao1.svg';
 
 export default function Apresentacao(){
 const descricaoImg = 'Imagem Jovem Programador';

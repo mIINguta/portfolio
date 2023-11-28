@@ -12,12 +12,12 @@ const [headerClass, setHeaderClass] = useState(false);
         <BrowserRouter>
         <header>
             <nav>
-                <button onClick={() => setHeaderClass(!headerClass)} className={`btn-hamburg ${headerClass ? 'desativo': 'ativo' }`} title="Abrir Menu">
+                <button onClick={() => setHeaderClass(!headerClass)} className={`btn-hamburg ${headerClass ? 'desativo': 'ativo'}`}  title="Abrir Menu">
                     <i class="fa-solid fa-bars">
                         </i></button>
                 <h2 className={`h2-header ${headerClass ? 'desativo': 'ativo' }`}>Portfólio</h2>
-                <ul className={`ul-header ${headerClass ? 'ativo' : 'desativo'}`}>
-                <button onClick={() => setHeaderClass(!headerClass)}className="btn-hamburg-close " title="Fechar">
+                <ul className={`ul-header ${headerClass ? 'ativo': 'desativo' }`}>
+                <button onClick={() => setHeaderClass(!headerClass)}className={`btn-hamburg-close ${headerClass ? 'ativo': 'desativo'}`} title="Fechar">
                 <i class="fa-solid fa-xmark"></i></button>
                     <li><Link to="/" title="Home">Home</Link></li>
                     <li><Link to="/sobre" title="Sobre Mim"> Sobre mim</Link></li>
