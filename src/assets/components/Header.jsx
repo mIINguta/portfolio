@@ -9,7 +9,6 @@ export default function Header(){
 const [headerClass, setHeaderClass] = useState(false);
     return(
         <>
-        
         <BrowserRouter>
         <header>
             <nav>
