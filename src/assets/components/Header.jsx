@@ -2,7 +2,7 @@ import {React, useState, useRef, useEffect} from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Experiencia from '../pages/Experiencia';
 import SobreMim from "../pages/SobreMim";
-import Apresentacao from "./Apresentacao";
+import Apresentacao from "../pages/Apresentacao";
 import Projetos from "../pages/Projetos";
 
 export default function Header(){

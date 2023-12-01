@@ -30,7 +30,6 @@ align-items: center;
 gap: 20px;
 `
 export const A = styled.a`
-background: transparent;
 text-decoration: none;
 color: #C4C4C4;
 padding: 8px;

@@ -11,7 +11,6 @@ import ERPmm from "../image/projetos/erp-mm.png"
 import todoListLocal from "../image/projetos/todo-list-local.png";
 import todoListPessoal from "../image/projetos/todo-list-pessoal.png";
 
-
 export default function Projetos(props){
     return(
         <>
