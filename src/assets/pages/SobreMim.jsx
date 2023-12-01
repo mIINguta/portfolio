@@ -25,7 +25,7 @@ export default function SobreMim(){
                     <li><a href="https://www.linkedin.com/in/gustavominguta/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                 </ul>
                 <div className="btn-sobremim">
-                <a href="public/curriculo-novo.pdf" download="curriculo-novo.pdf"><i class="fa-solid fa-download"></i> Curriculo</a>
+                <a href="public/curriculo-novo.pdf" download={true}><i class="fa-solid fa-download"></i> Curriculo</a>
                 <a href="mailto:gustavo.minguta@gmail.com"> <i class="fa-solid fa-envelope"></i> E-mail</a>
                 </div>
             </div>
