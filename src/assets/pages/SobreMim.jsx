@@ -14,7 +14,7 @@ export default function SobreMim(){
             <div className="div-sobre">
                 <h1><span>SOBRE MIM</span></h1>
                 <h2>Belford Roxo, Rio de Janeiro</h2>
-                <p>Tenho 23 anos, sou cristão, desenvolvedor e baterista. Gosto de ler, assistir documentários e séries em meu tempo livre, também gosto de futebol, vôlei e basquete.</p>
+                <p>Tenho 23 anos, sou formado em Sistemas de Informação pela faculdade UNIGRANRIO, cristão, desenvolvedor e baterista. Gosto de ler, assistir documentários e séries em meu tempo livre, também gosto de futebol, vôlei e basquete.</p>
                 <p><span>Hard Skills</span>: Html, Css, Java Script, NodeJs, ReactJs, MySQL</p>
                 <p><span>Soft Skills</span>: Proatividade, Comunicação, Paciência, Dedicação e Sinceridade</p>
 

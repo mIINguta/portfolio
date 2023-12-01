@@ -116,7 +116,7 @@ main{
     }
 }
         figure{
-            width: 30vw;
+            width: 20vw;
             img{
                 width: 100%;
                 height: 100%;
@@ -304,7 +304,6 @@ main{
 }
 
 @media (max-width:800px){
-
     header{
         .ativo{
         display: flex;
@@ -317,19 +316,27 @@ main{
             width: 100vw;
             backdrop-filter: blur(30px);
             position: fixed;
-            
         ul{
-            
-            position: absolute;
-            backdrop-filter:blur(30px);
+            backdrop-filter:blur(50px);
             width: 100%;
-            height: 100%;
-            justify-content: center;
+            padding: 20px;
+            gap:10px;
+            flex-wrap: wrap;
+            text-align: center;
+
+            li{
+                width: 30%;
+            }
         }
         .btn-hamburg{
             font-size: 2em;
         }
+        .btn-hamburg-close{
+            width: 100%;
+            justify-content: center;
+        }
     }
+
 }
     .sec-apresentacao{
         flex-direction: column;
@@ -406,15 +413,12 @@ main{
             @include flex-horizontal();
             gap: 10px;
             flex-wrap: wrap;      
-                
-           
-
             div{
                 width: 100%;
                 height: 100%;
                 
                 figure{
-                    width: 100%;
+                    width: 360px;
                 }
             }
         }
