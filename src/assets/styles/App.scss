@@ -82,6 +82,19 @@ header{
     color: $brand-color;
 }
 
+.nome-apresentacao{
+    animation: pulse 4s infinite;
+}
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(20%);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+  }
 main{
     background-color: $dark-10;
     font-family: 'Inter', sans-serif;

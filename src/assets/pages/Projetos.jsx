@@ -10,6 +10,7 @@ import Portfolio2 from "../image/projetos/portfolio2.png"
 import ERPmm from "../image/projetos/erp-mm.png"
 import todoListLocal from "../image/projetos/todo-list-local.png";
 import todoListPessoal from "../image/projetos/todo-list-pessoal.png";
+import MyCar from "../image/projetos/MyCar.jpeg";
 
 export default function Projetos(props){
     return(
@@ -26,7 +27,8 @@ export default function Projetos(props){
                 <ProjetosD imagem = {todoListLocal} nome= "ERP MM Contabilidade - TodoList" descricao = "Todo List que pertence ao Sistema da Web da MM. As tecnologias utilizadas foram HTML, CSS, Java Script, EJS, Node JS e Banco de Dados MSQL"link_repo="" link_visu=""/>
                 <ProjetosD imagem = {todoListPessoal} nome= "TodoList" descricao = "Todo List que salva os dados em localStorage do navegador. As tecnologias utilizadas foram HTML, CSS, Java Script."link_repo="https://github.com/mIINguta/todo-list" link_visu="https://miinguta.github.io/todo-list/"/>
                 <ProjetosD imagem = {MMcontabilidade} nome= "MM Contabilidade" descricao = "Trata-se de um portal onde mostra todos os serviços e a equipe que compõe o escritório onde trabalho., utilizando HTML, CSS e JS" link_repo="https://github.com/mIINguta/projeto-site-mmac" link_visu="https://miinguta.github.io/projeto-site-mmac/"/>
-                <ProjetosD imagem = {ERPmm} nome= "ERP MM Contabilidade" descricao = "Sistema Web para que os contadores tivessem um controle financeiro melhor, onde é possivel cadastrar as empresas e os pagamentos mensais efetuados. As tecnologias utilizadas foram HTML, CSS, Java Script, EJS, Node JS e Banco de Dados MSQL"link_repo= "" link_visu=""/>
+                <ProjetosD imagem = {ERPmm} nome= "ERP MM Contabilidade" descricao = "Sistema Web para que os contadores tivessem um controle financeiro melhor, onde é possivel cadastrar as empresas e os pagamentos mensais efetuados. As tecnologias utilizadas foram HTML, CSS, Java Script, EJS, Node JS e Banco de Dados MSQL" link_repo= "" link_visu=""/>
+                <ProjetosD imagem = {MyCar} nome= "MyCar" descricao = "Sistema Web que permite que o usuário tenha controle sobre as informações de seus respectivos veículos e as manutenções feitas nele. As tecnologias utilizadas são: React, Typescript, Sass, .Net (Entity Framework), C# e SQL Server. " link_repo= "https://github.com/mIINguta/MyCar" link_visu="https://www.linkedin.com/feed/update/urn:li:activity:7229558552644751360/" />
                 </section>
             </section>
         </>

@@ -25,10 +25,15 @@ function definirExp(e){
         setLocal("Savez Certificadora / MM Assessoria Contábil");
         break;
 
-    case "Desenvolvimento Web":
+    case "Desenvolvedor Front-End":
         setDescricao("Após frustrações pessoas, resolvi voltar ao foco. No início de 2023, tive a oportunidade de estudar na escola Vai na Web, com o curso de Desenvolvimento Front-End. Realizei diversos projetos ao decorredor do curso, também realizei projetos pessoais. Consigo hoje utilizar esse conhecimento também no escritório onde trabalho, algo que é muito gratificante.");
-        setPeriodo("Janeiro 2023 - Atualmente");
+        setPeriodo("Janeiro 2023 - Dezembro 2023");
         setLocal("Vai na Web");
+        break;
+    case "Desenvolvedor .NET":
+        setDescricao("Disponibilizado pela plataforma da DIO, pude entra no mundo .NET, aprendendo seus princípios básicos e intermediários, através de diversos projetos realizados ao decorrer do bootcamp.");
+        setPeriodo("Março 2023 - Abril 2024");
+        setLocal("DIO");
         break;
     break;
 }
@@ -43,7 +48,8 @@ function definirExp(e){
                 <ul>
                     <li><button onClick={definirExp}>Suporte</button></li>
                     <li><button onClick={definirExp}>Agente de Registro</button></li>
-                    <li><button onClick={definirExp}>Desenvolvimento Web</button></li>
+                    <li><button onClick={definirExp}>Desenvolvedor Front-End</button></li>
+                    <li><button onClick={definirExp}>Desenvolvedor .NET</button></li>
                 </ul>
             </aside>
                 <section className="conteiner-exp">

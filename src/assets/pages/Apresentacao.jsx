@@ -11,7 +11,7 @@ const descricaoLink ='Abrir link para';
                 <div className="div-apresentacao">
                     <p>OLÁ, EU SOU</p>
                     <h1 className="nome-apresentacao">Gustavo Minguta</h1>
-                    <h2>Desenvolvedor Front-End</h2>
+                    <h2>Desenvolvedor Full-Stack</h2>
                 <div className="btn-apresentacao">
                     <A href="https://www.linkedin.com/in/gustavominguta/" target="__blank" title={`${descricaoLink} Linkedin`}> <i class="fa-brands fa-linkedin-in"></i> Linkedin</A>
                     <A href="https://github.com/mIINguta" target="_blank"  title={`${descricaoLink} Github`} > <i class="fa-brands fa-github"></i> GitHub</A>

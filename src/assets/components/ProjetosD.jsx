@@ -15,7 +15,7 @@ export default function ProjetosD(props){
             <Buttons>
                 <A href={props.link_repo} target="_blank" className={props.link_repo == "" ? 'btn-desativo': 'btn-ativo'}>
                     <i class="fa-brands fa-github"></i> Repositório</A>
-                <A href={props.link_visu} target="_blank" className={props.link_repo == "" ? 'btn-desativo': 'btn-ativo'}><i class="fa-solid fa-globe"></i> Visualizar</A>
+                <A href={props.link_visu} target="_blank" className={props.link_visu == "" ? 'btn-desativo': 'btn-ativo'}><i class="fa-solid fa-globe"></i> Visualizar</A>
             </Buttons>
         </Projeto>
         </>
